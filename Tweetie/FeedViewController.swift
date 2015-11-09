@@ -36,8 +36,8 @@ class FeedViewController: UITableViewController {
         // Register our custom cell to be used with our tableview
         tableView.registerClass(TweetTableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
 
-        // This allows the row height to be dynamic (varying based on content)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        // Set height of each cell
+        tableView.rowHeight = 70
 
         // Try to retrieve the results from Core Data
         do {
@@ -47,7 +47,7 @@ class FeedViewController: UITableViewController {
         }
 
         // Retrieve tweets
-        APIClient.retrieveTweets()
+        APIClient.sharedInstance.retrieveTweets()
     }
 
     // MARK: UITableView Delegate & DataSource
@@ -58,7 +58,7 @@ class FeedViewController: UITableViewController {
 
         // Configure cell based on the tweet at this indexpath
         if let tweet = fetchedResultsController.objectAtIndexPath(indexPath) as? Tweet {
-            cell.textLabel?.text = "@\(tweet.username)"
+            cell.textLabel?.text = "@\(tweet.username ?? "")"
             cell.detailTextLabel?.text = tweet.content
         }
 

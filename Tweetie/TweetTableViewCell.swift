@@ -14,11 +14,11 @@ class TweetTableViewCell: UITableViewCell {
 
         super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
 
-        textLabel?.textColor = UIColor.blueColor()
+        textLabel?.textColor = UIColor(red: 48.0/255, green: 166.0/255, blue: 251.0/255, alpha: 1.0)
         textLabel?.font = UIFont.systemFontOfSize(15)
         detailTextLabel?.textColor = UIColor.blackColor()
         detailTextLabel?.font = UIFont.systemFontOfSize(18)
-        detailTextLabel?.numberOfLines = 0
+        detailTextLabel?.numberOfLines = 2
     }
 
     required init?(coder aDecoder: NSCoder) {
