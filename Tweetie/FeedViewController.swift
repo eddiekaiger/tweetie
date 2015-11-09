@@ -31,6 +31,8 @@ class FeedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Tweets"
+
         // Register our custom cell to be used with our tableview
         tableView.registerClass(TweetTableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
 

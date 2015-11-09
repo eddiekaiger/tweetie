@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99F031A5D9614AAF3F12B940 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495CB95C7C54DD2F927FCEF9 /* Pods.framework */; };
 		BA62274F1BF07E19002CDF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62274E1BF07E19002CDF94 /* AppDelegate.swift */; };
 		BA6227571BF07E19002CDF94 /* Tweetie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA6227551BF07E19002CDF94 /* Tweetie.xcdatamodeld */; };
 		BA6227591BF07E19002CDF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6227581BF07E19002CDF94 /* Assets.xcassets */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02831BBDBFD4702C98680F6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		495CB95C7C54DD2F927FCEF9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA62274B1BF07E19002CDF94 /* Tweetie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweetie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA62274E1BF07E19002CDF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6227561BF07E19002CDF94 /* Tweetie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tweetie.xcdatamodel; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		BA6227781BF0843C002CDF94 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		BA62277B1BF084B4002CDF94 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		BA62277D1BF0876F002CDF94 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FBC8F23EDF774D59AB3A5D4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F031A5D9614AAF3F12B940 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B598952C108219EC5528B0FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02831BBDBFD4702C98680F6D /* Pods.debug.xcconfig */,
+				FBC8F23EDF774D59AB3A5D4B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8548294530623689F1C5AC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				495CB95C7C54DD2F927FCEF9 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA6227421BF07E19002CDF94 = {
 			isa = PBXGroup;
 			children = (
 				BA62274D1BF07E19002CDF94 /* Tweetie */,
 				BA6227651BF07E19002CDF94 /* TweetieTests */,
 				BA62274C1BF07E19002CDF94 /* Products */,
+				B598952C108219EC5528B0FF /* Pods */,
+				B8548294530623689F1C5AC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA62276B1BF07E19002CDF94 /* Build configuration list for PBXNativeTarget "Tweetie" */;
 			buildPhases = (
+				43DFEFD7BC8D9AF7264D1640 /* Check Pods Manifest.lock */,
 				BA6227471BF07E19002CDF94 /* Sources */,
 				BA6227481BF07E19002CDF94 /* Frameworks */,
 				BA6227491BF07E19002CDF94 /* Resources */,
+				7155ABAB31001AEB56515B4B /* Embed Pods Frameworks */,
+				21681A08A73655F3926BD8EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +229,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21681A08A73655F3926BD8EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43DFEFD7BC8D9AF7264D1640 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7155ABAB31001AEB56515B4B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA6227471BF07E19002CDF94 /* Sources */ = {
@@ -331,6 +406,7 @@
 		};
 		BA62276C1BF07E19002CDF94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02831BBDBFD4702C98680F6D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tweetie/Info.plist;
@@ -342,6 +418,7 @@
 		};
 		BA62276D1BF07E19002CDF94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC8F23EDF774D59AB3A5D4B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tweetie/Info.plist;
@@ -394,6 +471,7 @@
 				BA62276D1BF07E19002CDF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA62276E1BF07E19002CDF94 /* Build configuration list for PBXNativeTarget "TweetieTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +480,7 @@
 				BA6227701BF07E19002CDF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

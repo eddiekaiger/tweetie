@@ -10,4 +10,11 @@ import UIKit
 
 class APIClient: NSObject {
 
+
+    class func retrieveTweets() {
+
+        
+
+    }
+
 }
