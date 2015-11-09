@@ -2,7 +2,7 @@
 	{
 		"postID": 10001,
 		"username": "eddiekaiger",
-		"content": "omg I love Swift"
+		"content": "omg I love Swift and this is some really long tweet that should go over one line"
 	},
 	{
 		"postID": 10002,
@@ -33,5 +33,15 @@
 		"postID": 10007,
 		"username": "joeferrucci",
 		"content": "omg I love Swift"
+	},
+	{
+		"postID": 10008,
+		"username": "aardvark",
+		"content": "Boom son"
+	},
+	{
+		"postID": 10009,
+		"username": "aardvark",
+		"content": "heeyyyaaaa"
 	}
 ]
