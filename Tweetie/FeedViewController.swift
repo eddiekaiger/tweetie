@@ -45,6 +45,9 @@ class FeedViewController: UITableViewController {
         } catch {
             print("Failed to perform fetch.")
         }
+
+        // Retrieve tweets
+        APIClient.retrieveTweets()
     }
 
     // MARK: UITableView Delegate & DataSource
